@@ -1,18 +1,50 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html> <!--set doc to standard html for browser to render properly-->
+<html lang="en"> <!--root container of html content-->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="app.js" type="text/javascript" defer></script>
-		<link rel="icon" type="image/png" href="images/favicon-dark.png">
-		<link href="images/favicon-light.png" rel="icon" media="(prefers-color-scheme: dark)">
-		<link href="images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: light)">
-		<link rel="icon" type="image/gif" href="favicon.gif">
-		<title>ARXLite</title>
+		<!--meta section-->
+    <meta charset="UTF-8"> <!--sets character set, utf-8 is universal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--set viewport to fit screen, no zoom-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--compatibility support for IE users-->
+		<meta name="description" content="A site written entirely by _ARX."> <!--set website description-->
+		<meta name="author" content="_ARX"> <!--set author-->
+		<meta name="theme-color" content="#242424"> <!--set theme for mobile-->
+		
+		
+		<!--script section-->
+		<script src="app.js" type="text/javascript" defer></script>
+		
+		
+		<!--link section-->
+    <link rel="stylesheet" href="app.css" type="text/css" /> <!--set stylesheet-->
+		<link id="favicon" rel="icon" href="res/images/favicon-dark.png" type="image/png"> <!--set icon types-->
+
+		
+		<!--end properties-->
+		<title>_ARX Core</title>
   </head>
+	
+	
   <body>
-      
+		<header id="header"></header> <!--Empty Header-->
+		<!--what is this??-->
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<main>
+				<h2>Welcome to My Website</h2>
+				<p>This is a simple example of a webpage styled with CSS. Feel free to modify the CSS and HTML to suit your needs!</p>
+				<!--soundcloud widget-->
+				<iframe width="100%" height="440" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889096723&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+
+		</main>
+		
+		<footer id="footer"></footer> <!--Empty Footer-->
   </body>
 <html>

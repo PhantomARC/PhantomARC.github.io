@@ -1,0 +1,96 @@
+/* Set Browser Style */
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+/* Set min height for html and body */
+
+
+/* Body styles */
+body {
+	font-family: sans-serif; 
+	line-height: 1.6;/* Increases line height for better readability */
+	background-color: #232323; /* Light gray background */
+	color: #333; /* Dark gray text color */
+	display: flex; /* Use flexbox to layout body content */
+	flex-direction: column; /* Stack children vertically */
+}
+
+
+/* Navigation styles */
+nav {
+	margin: 20px 0; /* Margin around the navigation */
+}
+
+nav ul {
+	list-style-type: none; /* Remove bullet points from list */
+}
+
+nav ul li {
+	display: inline; /* Display list items in a line */
+	margin: 0 15px; /* Margin between items */
+}
+
+nav ul li a {
+	color: #ffffff; /* White text color */
+	text-decoration: none; /* Remove underline from links */
+}
+
+/* Main Block Style */
+main {
+	flex: 1; /* Allow main content to grow and fill available space */
+	max-width: 600px; /* max width */
+	margin: 16px auto; /* center main */
+	padding: 16px; /* block inner padding */
+	background: #36393e; /* block background color */
+	border-radius: 5px; /* rounded corners */
+	color: #ffffff; /* text color */
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.1); /* outline shadow */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+	nav ul li {
+		display: block; /* Stack items vertically on small screens */
+		margin: 10px 0; /* Margin above and below items */
+	}
+}
+
+@font-face {
+    font-family: 'ARXGlyph';
+    src: uri('res/fonts/ARXGlyph.woff') format('woff'),
+				uri('res/fonts/ARXGlyph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Header */
+header {
+	font-family:'ARXGlyph', sans-serif; 
+	font-size: 32px;
+	background: #111111; /* Dark gray background */
+	color: #ffffff; /* White text color */
+	padding: 8px 16px; /* Padding around the header */
+	text-align: left; /* Center-align text */
+	position: relative; /* Normal flow positioning */
+	width: 100%; /* Full width */
+	
+}
+
+/* Footer */
+footer {
+	text-align: center; /* Center-align footer text */
+	padding: 6px; /* Padding around the footer */
+	background: #111111; /* Dark gray background */
+	color: #ffffff; /* White text color */
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

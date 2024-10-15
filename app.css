@@ -28,7 +28,7 @@ nav ul {
 	list-style-type: none; /* Remove bullet points from list */
 }
 
-nav ul li {
+nav ul li { 
 	display: inline; /* Display list items in a line */
 	margin: 0 15px; /* Margin between items */
 }
@@ -62,8 +62,8 @@ main {
 
 @font-face {
     font-family: 'ARXGlyph';
-    src: uri('res/fonts/ARXGlyph.woff') format('woff'),
-				uri('res/fonts/ARXGlyph.ttf') format('truetype');
+    src: uri('../res/fonts/ARXGlyph.woff') format('woff'),
+				uri('../res/fonts/ARXGlyph.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

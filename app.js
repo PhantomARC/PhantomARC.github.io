@@ -55,6 +55,43 @@ function typeHeader(message, index) {
 }
 
 
+const hexIcons = document.querySelectorAll('.hex-container');
+const hexText = document.querySelector('.hex-text');
+let hexTypeInterval; // To store the interval ID
+
+// Function to type out text letter by letter
+function typeText(text) {
+	let i = 0;
+	hexText.textContent = ''; // Clear previous text
+	hexText.style.visibility = 'visible'; // Make text visible
+
+	// Clear any previous interval to avoid overlaps
+	clearInterval(hexTypeInterval);
+
+	hexTypeInterval = setInterval(() => {
+		hexText.textContent += text[i]; // Add one letter at a time
+		i++;
+		if (i === text.length) {
+			clearInterval(hexTypeInterval); // Stop typing when done
+		}
+	}, 20); // Adjust typing speed here (100ms per letter)
+}
+
+// Attach event listeners to each icon container
+hexIcons.forEach(container => {
+	container.addEventListener('mouseenter', () => {
+		const newText = container.getAttribute('data-text'); // Get the text
+		typeText(newText); // Call typing function
+	});
+
+	container.addEventListener('mouseleave', () => {
+		hexText.style.visibility = 'hidden'; // Hide the text when mouse leaves
+		clearInterval(hexTypeInterval); // Stop any ongoing typing
+	});
+});
+
+
+
 //execute
 window.onload = function() {
 	setBrowserFavicon();

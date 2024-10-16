@@ -94,3 +94,33 @@ footer {
 	right: 0;
 	bottom: 0;
 }
+
+
+/* Styling for the red panel */
+.red-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+		width: 720px;
+    height: 90px;
+    background-image: url('res/images/headerPanel.png');
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1001;  /* Ensure the red panel is above the header */
+}
+
+/* Icon styles */
+.red-panel a img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: green;  /* Green background for icons */
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.red-panel a img:hover {
+    transform: scale(1.1);  /* Enlarge icons on hover */
+}

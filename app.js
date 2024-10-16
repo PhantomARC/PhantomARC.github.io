@@ -56,5 +56,7 @@ function typeHeader(message, index) {
 
 
 //execute
-setBrowserFavicon();
-typeHeader("WELCOME TO _ARX CORE >>>", 0);
+window.onload = function() {
+	setBrowserFavicon();
+	typeHeader("WELCOME TO _ARX CORE >>>", 0);
+};

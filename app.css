@@ -87,7 +87,7 @@ footer {
 		top: 22px;
 		width: 720px;
     height: 90px;
-    background-image: url('res/images/headerPanel.png');
+    background-image: url('res/images/hexPanel.png');
     padding: 9px 40px; /* pad y,x */
     display: flex;
     flex-direction: row;

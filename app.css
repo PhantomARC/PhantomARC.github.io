@@ -41,8 +41,58 @@ main {
 
 
 /* Responsive styles */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+	
+	  header {
+    font-size: 24px; /* Reduce header font size */
+    padding: 10px; /* Adjust padding */
+  }
+  
+  .hex-panel {
+    position: static; /* Change from fixed to static for smaller screens */
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Auto height to adjust to content */
+    padding: 10px; /* Reduce padding for mobile */
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center the icons */
+  }
+  
+  .hex-container {
+    width: 50px; /* Reduce icon size */
+    height: 50px;
+  }
+
+  .hex-text {
+    font-size: 24px; /* Adjust font size for text in panel */
+    top: auto; /* Adjust positioning */
+    left: auto;
+    margin-top: 10px; /* Add margin for separation */
+  }
 }
+
+
+@media (max-width: 480px) {
+  
+  header {
+    font-size: 18px; /* Further reduce font size */
+    padding: 8px;
+  }
+  
+  .hex-panel {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .hex-container {
+    width: 40px; /* Smaller icon size */
+    height: 40px;
+  }
+  
+  .hex-text {
+    font-size: 18px; /* Smaller text */
+  }
+}
+
+
 
 @font-face {
     font-family: 'ARXGlyph';

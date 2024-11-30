@@ -57,6 +57,7 @@ function typeHeader(message, index) {
 
 const hexIcons = document.querySelectorAll('.hex-container');
 const hexText = document.querySelector('.hex-text');
+const hexLink = document.querySelectorAll('.hex-link');
 let hexTypeInterval; // To store the interval ID
 
 // Function to type out text letter by letter
@@ -77,9 +78,14 @@ function typeText(text) {
 	}, 20); // Adjust typing speed here (100ms per letter)
 }
 
-// Attach event listeners to each icon container
-hexIcons.forEach(container => {
+
+hexIcons.forEach(container => { // Attach event listeners to each icon container
 	container.addEventListener('mouseenter', () => {
+		const newText = container.getAttribute('data-text'); // Get the text
+		typeText(newText); // Call typing function
+	});
+	
+	container.addEventListener('touchstart', () => {
 		const newText = container.getAttribute('data-text'); // Get the text
 		typeText(newText); // Call typing function
 	});
@@ -88,8 +94,25 @@ hexIcons.forEach(container => {
 		hexText.style.visibility = 'hidden'; // Hide the text when mouse leaves
 		clearInterval(hexTypeInterval); // Stop any ongoing typing
 	});
+	
+	container.addEventListener('touchend', () => {
+		hexText.style.visibility = 'hidden'; // Hide the text when mouse leaves
+		clearInterval(hexTypeInterval); // Stop any ongoing typing
+	});
 });
-
+hexLink.forEach(link => { // Attach event listeners to animations
+  link.addEventListener('touchstart', () => {
+    link.querySelector('.core-image').style.filter = 'invert(13%) sepia(74%) saturate(7013%) hue-rotate(-23deg) brightness(100%) contrast(105%)';
+    link.querySelector('.shell-image').style.filter = 'invert(13%) sepia(74%) saturate(7013%) hue-rotate(-23deg) brightness(100%) contrast(105%)';
+		link.querySelector('.shell-image').style.transform = 'scale(1.05) rotate(90deg)';
+		
+  });
+  link.addEventListener('touchend', () => {
+    link.querySelector('.core-image').style.filter = '';
+		link.querySelector('.shell-image').style.filter = '';
+    link.querySelector('.shell-image').style.transform = '';
+  });
+});
 
 
 //execute
@@ -97,3 +120,6 @@ window.onload = function() {
 	setBrowserFavicon();
 	typeHeader("WELCOME TO _ARX CORE >>>", 0);
 };
+
+
+

@@ -1,112 +1,59 @@
-:root { /* Global Scope Variables */
-	/* Color Binds */
+/* Global Scope Variables */
+:root { 
+	/* Colors */
   --vdgrey: #1a1a1a;
   --white: #ffffff;
 	--dkgrey: #36393e;
+	--edgrey: #232323;
 }
 
 
-
-/* Set Browser Style */
-* {
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-}
-
-/* Set min height for html and body */
-
-
-/* Body styles */
-body {
-	font-family: sans-serif; 
-	line-height: 1.6;/* Increases line height for better readability */
-	background-color: #232323; /* Light gray background */
-	position: relative;
-}
-
-
-/* Main Block Style */
-main {
-	flex: 1; /* Allow main content to grow and fill available space */
-	max-width: 600px; /* max width */
-	margin: 16px auto; /* center main */
-	padding: 16px; /* block inner padding */
-	background: var(--dkgrey); /* block background color */
-	border-radius: 5px; /* rounded corners */
-	color: var(--white); /* text color */
-	box-shadow: 0 0 16px rgba(0, 0, 0, 0.1); /* outline shadow */
-}
-
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
-	
-	  header {
-    font-size: 24px; /* Reduce header font size */
-    padding: 10px; /* Adjust padding */
-  }
-  
-  .hex-panel {
-    position: static; /* Change from fixed to static for smaller screens */
-    width: 100%; /* Full width on mobile */
-    height: auto; /* Auto height to adjust to content */
-    padding: 10px; /* Reduce padding for mobile */
-    flex-direction: column; /* Stack icons vertically */
-    align-items: center; /* Center the icons */
-  }
-  
-  .hex-container {
-    width: 50px; /* Reduce icon size */
-    height: 50px;
-  }
-
-  .hex-text {
-    font-size: 24px; /* Adjust font size for text in panel */
-    top: auto; /* Adjust positioning */
-    left: auto;
-    margin-top: 10px; /* Add margin for separation */
-  }
-}
-
-
-@media (max-width: 480px) {
-  
-  header {
-    font-size: 18px; /* Further reduce font size */
-    padding: 8px;
-  }
-  
-  .hex-panel {
-    padding: 5px; /* Further reduce padding */
-  }
-
-  .hex-container {
-    width: 40px; /* Smaller icon size */
-    height: 40px;
-  }
-  
-  .hex-text {
-    font-size: 18px; /* Smaller text */
-  }
-}
-
-
-
-@font-face {
+/* Load Fonts */
+@font-face { /* ARXGlyph */
     font-family: 'ARXGlyph';
     src: url('res/fonts/ARXGlyph.woff') format('woff'),
 				url('res/fonts/ARXGlyph.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+@font-face { /* XYBERR */
+		/* credits to https://www.behance.net/bertalan_gombos for XYBER-Regular font */
+    font-family: 'XYBERR';
+    src: url('res/fonts/XYBERR.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face { /* Montserrat */
+		/* credits to Google Fonts for Montserrat font */
+    font-family: 'Montserrat';
+    src: url('res/fonts/Montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
-/* Header */
-header {
-	font-family:'ARXGlyph', sans-serif; 
-	font-size: 32px;
+/* Set Default Fonts */
+h1, h2, h3, h4, h5, h6 { /* Headers */
+  font-family: 'XYBERR', sans-serif;
+}
+
+
+/* Styles */
+* { /* Browser Defaults */
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body { /* Body */
+	font-family: 'Montserrat', sans-serif; 
+	line-height: 1.8;/* Increases line height for better readability */
+	background: var(--edgrey); /* extradark grey */
+	position: relative;
+	font-size: 16px;
+}
+header { /* Sticky Header */
+	font-family:'ARXGlyph', 'Montserrat'; 
+	font-size: 38px;
 	background: var(--vdgrey); /* header bg */
 	color: var(--white); /* text colour */
 	padding: 8px 16px; /* header padding y,x */
@@ -115,10 +62,7 @@ header {
 	width: 100%; /* Full width */
 	top: 0;
 }
-
-
-/* Footer */
-footer {
+footer { /* Footer */
 	text-align: center; /* Center-align footer text */
 	padding: 6px; /* Padding around the footer */
 	background: var(--vdgrey); /* footer bg */
@@ -130,11 +74,75 @@ footer {
 }
 
 
+/* Content Organization */
+.grid { /* Body Blocks */
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Left block twice as wide as right block */
+  grid-template-rows: auto; /* Adjust height automatically */
+  gap: 8px; /* Space between blocks */
+  width: 100%;
+  height: 90vh; /* Full viewport height */
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+.grid-left { /* Large Block */
+  height: 96.25%; /* Ensures it fills the grid row */
+	background: var(--dkgrey); /* block background color */
+	border-radius: 8px; /* rounded corners */
+	color: var(--white); /* text color */
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.11); /* outline shadow */
+}
+.grid-right { /* Small Grid */
+	margin:  40px 12px; /* center main */
+  display: grid;
+  grid-template-rows: 1fr 2fr; /* Two equal-height rows */
+  gap: 20px; /* Space between top and bottom blocks */
+  height: 90%; /* Ensures it fills the grid row */
+}
+
+.top-block { /*  */
+  background-color: var(--dkgrey);
+  color: var(--white);
+	border-radius: 6px; /* rounded corners */
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* outline shadow */
+	text-align: center;
+}
+
+.bottom-block { /*  */
+  background-color: var(--dkgrey);
+  color: var(--white);
+	border-radius: 6px; /* rounded corners */
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* outline shadow */
+	text-align: center;
+  grid-template-rows: 0.6fr 1.4fr; /* Two equal-height rows */
+  gap: 8px; /* Space between blocks */
+  width: 100%;
+  height: 100%; /* expand to fill vertically */
+  box-sizing: border-box;
+	min-height: 330px;
+	max-height: 600px;
+}
+
+.caption-block { /* different color headers */
+	border-top-left-radius: 6px;  /* topleft corner */
+	border-top-right-radius: 6px;  /* topright corner */
+	background-color: var(--vdgrey);
+	padding: 4px 8px;
+}
+.content-block { /* section for content */
+	border-bottom-left-radius: 6px;  /* botleft corner */
+	border-bottom-right-radius: 6px;  /* botright corner */
+	padding: 12px 12px;
+	height: 100%; /* Expand to fill height */
+}
+
+
+
 /* Styling for hex panel */
 .hex-panel {
     position: fixed;
     right: 0px;
-		top: 22px;
+		top: 38px;
 		width: 720px;
     height: 90px;
     background-image: url('res/images/hexPanel.png');
@@ -191,4 +199,106 @@ footer {
   white-space: nowrap; /* Prevent text wrapping */
   visibility: hidden; /* Hidden initially */
   color: var(--white); /* font colour */
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1560px) { /* SMALL LAPTOP */
+	
+	header {
+    font-size: 32px; /* Reduce header font size */
+    padding: 10px; /* Adjust padding */
+  }
+	
+	body {
+		font-size: 16px;
+	}
+	
+  .hex-panel {
+		transform: scale(0.80);
+		top: 32px;
+		right: -60px;
+    padding: 8px 40px; /* pad y,x */
+  }
+}
+
+@media (max-width: 1300px) { /* MOBILE TABLET */
+	
+	header {
+    font-size: 26px; /* Reduce header font size */
+    padding: 10px; /* Adjust padding */
+  }
+	
+	body {
+		font-size: 12px;
+	}
+	
+  .hex-panel {
+		transform: scale(0.6);
+		right: -150px;
+		top: 49px;
+    padding: 8px 40px; /* pad y,x */
+  }
+}
+
+@media (max-width: 900px) { /* MOBILE TABLET */
+	
+	header {
+    font-size: 22px; /* Reduce header font size */
+    padding: 10px; /* Adjust padding */
+  }
+	
+	body {
+		font-size: 12px;
+	}
+	
+  .hex-panel {
+		transform: scale(0.6);
+		right: -155px;
+		top: 42px;
+    padding: 8px 40px; /* pad y,x */
+  }
+	
+	/* Content Organization */
+	.grid { /* Body Blocks */
+		display: grid;
+		grid-template-columns: 1fr; /* Left block twice as wide as right block */
+		grid-template-rows: auto; /* Adjust height automatically */
+		height: 100vh; /* Full viewport height */
+		padding: 6px 6px;
+		gap: 8px;
+		
+		box-sizing: border-box;
+	}
+	.grid-left { /* Large Block */
+	margin:  40px 12px; /* center main */
+		height: 96%; /* Ensures it fills the grid row */
+	}
+	.bottom-block { /*  */
+		height: 133%; /* expand to fill vertically */
+	}
+}
+
+@media (max-width: 525px) { /* SMALL MOBILE */
+  
+  header {
+    font-size: 15px; /* Further reduce font size */
+    padding: 8px;
+  }
+	
+	body {
+		font-size: 12px;
+	}
+  
+  .hex-panel {
+		transform: scale(0.42);
+		right: -210px;
+		top: 17px;
+    padding: 8px 40px; /* pad y,x */
+  }
 }

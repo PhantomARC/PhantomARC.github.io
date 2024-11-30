@@ -1,10 +1,10 @@
 /* Global Scope Variables */
 :root { 
 	/* Colors */
-  --vdgrey: #1a1a1a;
-  --white: #ffffff;
-	--dkgrey: #36393e;
-	--edgrey: #232323;
+  --vdgrey: #1a1a1a; /* very dark grey */
+  --white: #ffffff; /* white */
+	--dkgrey: #36393e; /* dark grey */
+	--edgrey: #232323; /* extra dark grey */
 }
 
 
@@ -30,6 +30,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+
 
 
 /* Set Default Fonts */
@@ -61,6 +64,7 @@ header { /* Sticky Header */
 	position: sticky; /* Normal flow positioning */
 	width: 100%; /* Full width */
 	top: 0;
+	z-index: 900;
 }
 footer { /* Footer */
 	text-align: center; /* Center-align footer text */
@@ -156,8 +160,7 @@ footer { /* Footer */
 /* Icon styles */
 .hex-panel a img {
     padding: 0px;
-    transition: 
-			filter 0.25s ease, transform 0.45s ease-in-out;
+    transition: filter 0.25s ease, transform 0.45s ease-in-out;
 		filter: invert(100%);
 }
 
@@ -201,11 +204,37 @@ footer { /* Footer */
   color: var(--white); /* font colour */
 }
 
+.proj-link:hover .proj-image{
+	transform: scale(1.10);
+}
 
+.proj-panel a img {
+    transition: filter 0.15s ease, transform 0.25s ease-in-out;
+}
 
+.proj-panel {
+		width: 100%;
+		height: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+		flex: 1 1 auto;
+		flex-wrap: wrap;
+		justify-content: center;
+}
 
+.proj-container {
+	position: relative; /* Set up the container as relative positioning context */
+	min-width: 156px;
+	min-height: 156px;
+	max-width: 156px;
+  max-height: 156px;
+}
 
-
+.proj-image {
+  width: 100%; /* Ensures the images are the same size */
+  height: 100%; /* Ensures the images are the same size */
+}
 
 
 @media (max-width: 1560px) { /* SMALL LAPTOP */

@@ -3,13 +3,6 @@
  * Footer Block
  */
 
-const footer = document.getElementById('footer');
-footer.content = document.createTextNode('© 2024 _ARX Core by _ARX. All rights reserved.');
-footer.appendChild(footer.content);
-document.body.appendChild(footer);
-
-
-
 // change the favicon based on the browser
 const favicon = document.getElementById('favicon'); //grab favicon Element
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -58,6 +51,7 @@ function typeHeader(message, index) {
 const hexIcons = document.querySelectorAll('.hex-container');
 const hexText = document.querySelector('.hex-text');
 const hexLink = document.querySelectorAll('.hex-link');
+const headerAtt = document.querySelector('.headerpanel').getAttribute('header-text');
 let hexTypeInterval; // To store the interval ID
 
 // Function to type out text letter by letter
@@ -118,18 +112,8 @@ hexLink.forEach(link => { // Attach event listeners to animations
 //execute
 window.onload = function() {
 	setBrowserFavicon();
-	typeHeader("WELCOME TO _ARX CORE >>>", 0);
+	typeHeader(headerAtt, 0);
 };
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-	console.log("YEP");
-	fetch('./header.html')
-		.then(response => response.text())
-		.then(data => document.querySelector('header').innerHTML = data);
-
-	fetch('./footer.html')
-		.then(response => response.text())
-		.then(data => document.querySelector('footer').innerHTML = data);
-});

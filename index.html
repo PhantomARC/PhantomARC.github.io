@@ -14,7 +14,6 @@
 		<meta name="robots" content="index, follow">
 		<!--scripts-->
 		<script src="app.js" type="text/javascript" defer></script>
-		<script src="res/html/default.js" type="text/javascript" defer></script>
 		
 		<!--links-->
     <link rel="stylesheet" href="app.css" type="text/css" /> <!--set stylesheet-->
@@ -27,7 +26,16 @@
 	
 	
   <body>
-		<header></header>
+		<header id="header"> <!--Type container-->
+			<div class="headerpanel" header-text="WELCOME TO _ARX CORE >>>">
+			​
+			</div>
+			<div class="typing-container">
+        <h1><span class="typing-text"></span></h1>
+			</div>
+		</header> 
+		
+		
 		<div class="hex-panel">
 			<a href="index.html" class="hex-link"> <!--home-->
 				<div class="hex-container" title="Home" data-text="_ARX CORE">
@@ -55,21 +63,90 @@
 		</div>
 		
 		<div class="grid">
-				<div class="grid-left">
-					<div class="caption-block">
-						<h2>Welcome to My Website</h2>
+			<div class="grid-left">
+				<div class="caption-block">
+					<h2>News Feed + Changelog</h2>
+				</div>
+				<div class="stack-block">
+					<div class="stack">
+						<a href="index.html" class="stack-link"> 
+							<div class = "stack-block-date">
+								<h1>
+									12.01.2024
+								</h1>
+							</div>
+							<div class = "stack-block-text">
+								<h6>
+									[_ARX Core] — Website Created
+								</h6>
+							</div>
+						</a>
 					</div>
-					<div class="content-block">
-						<p>This is a simple example of a webpage styled with CSS. Feel free to modify the CSS and HTML to suit your needs!</p>
+					<div class="stack">
+						<a href="gg2p2.html" class="stack-link"> 
+							<div class = "stack-block-date">
+								<h1>
+									11.24.2024
+								</h1>
+							</div>
+							<div class = "stack-block-text">
+								<h6>
+									[Goomble Gurt II] — Game Part 2 Released
+								</h6>
+							</div>
+						</a>
+					</div>
+					<div class="stack">
+						<a href="https://soundcloud.com/arxlight/sets/goomble-gurt-ii-ost" class="stack-link"> 
+							<div class = "stack-block-date">
+								<h1>
+									09.24.2024
+								</h1>
+							</div>
+							<div class = "stack-block-text">
+								<h6>
+									[Goomble Gurt II] — OST Album Released
+								</h6>
+							</div>
+						</a>
+					</div>
+					<div class="stack">
+						<a href="gg2p1.html" class="stack-link"> 
+							<div class = "stack-block-date">
+								<h1>
+									09.24.2024
+								</h1>
+							</div>
+							<div class = "stack-block-text">
+								<h6>
+									[Goomble Gurt II] — Game Part 1 Released
+								</h6>
+							</div>
+						</a>
+					</div>
+					<div class="stack">
+						<a href="https://soundcloud.com/arxlight/sets/artifacts-interfaces" class="stack-link">
+							<div class = "stack-block-date">
+								<h1>
+									06.13.2024
+								</h1>
+							</div>
+							<div class = "stack-block-text">
+								<h6>
+									[Artifacts & Interfaces] — EP Released
+								</h6>
+							</div>
+						</a>
 					</div>
 				</div>
-				
-				<div class="grid-right">
-					<div class="top-block">
+			</div>
+			
+			<div class="grid-right">
+				<div class="top-block">
+					<div class = "utility-block">
 						<div class="caption-block">
 							<h2>Latest Projects</h2>
 						</div>
-						
 						<div class="content-block">
 							<div class="proj-panel">
 								<!--ADD CONTENT PROJECT BLOCKS HERE-->
@@ -78,34 +155,36 @@
 										<img src="res/images/gg21.png" alt="GGII-1" class="proj-image">
 									</div>
 								</a>
-								
 								<a href="gg2p2.html" class="proj-link">
 									<div class="proj-container" title="Goomble Gurt II - Part 2">
 										<img src="res/images/gg22.png" alt="GGII-2" class="proj-image">
 									</div>
 								</a>
-								
-
 							</div>
 						</div>
 					</div>
-					<div class="bottom-block">
+				</div>
+				<div class="bottom-block">
+					<div class = "utility-block">
 							<div class="caption-block">
 								<h2>Recent Album</h2>
 							</div>
-							<div class="content-block">
+							<div class="embed-block">
 								<!--soundcloud widget-->
 								<iframe 
 										width="100%" 
-										height="88%" 
+										height="600px" 
 										scrolling="no" 
 										frameborder="no" 
 										src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889096723">
 								</iframe>
 							</div>
-					</div>
+						</div>
 				</div>
 			</div>
-		<footer></footer>
+		</div>
+		<div class="spacer"></div>
+		<footer id="footer">© 2024 _ARX Core by _ARX. All rights reserved.</footer>
   </body>
+	
 <html>

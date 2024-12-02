@@ -52,46 +52,47 @@ const hexIcons = document.querySelectorAll('.hex-container');
 const hexText = document.querySelector('.hex-text');
 const hexLink = document.querySelectorAll('.hex-link');
 const headerAtt = document.querySelector('.headerpanel').getAttribute('header-text');
-let hexTypeInterval; // To store the interval ID
+let hexTypeInterval;
 
-// Function to type out text letter by letter
+/* typeText
+ * This function inserts text letter by letter into the navpanel at fixed intervals.
+*/
 function typeText(text) {
 	let i = 0;
-	hexText.textContent = ''; // Clear previous text
-	hexText.style.visibility = 'visible'; // Make text visible
-
-	// Clear any previous interval to avoid overlaps
+	hexText.textContent = '';
+	hexText.style.visibility = 'visible';
+	
 	clearInterval(hexTypeInterval);
 
 	hexTypeInterval = setInterval(() => {
-		hexText.textContent += text[i]; // Add one letter at a time
+		hexText.textContent += text[i]; 
 		i++;
 		if (i === text.length) {
-			clearInterval(hexTypeInterval); // Stop typing when done
+			clearInterval(hexTypeInterval);
 		}
-	}, 20); // Adjust typing speed here (100ms per letter)
+	}, 20); // type speed
 }
 
 
-hexIcons.forEach(container => { // Attach event listeners to each icon container
+hexIcons.forEach(container => { // Attach event listeners to each container
 	container.addEventListener('mouseenter', () => {
-		const newText = container.getAttribute('data-text'); // Get the text
-		typeText(newText); // Call typing function
+		const newText = container.getAttribute('data-text');
+		typeText(newText);
 	});
 	
-	container.addEventListener('touchstart', () => {
-		const newText = container.getAttribute('data-text'); // Get the text
-		typeText(newText); // Call typing function
+	container.addEventListener('touchstart', () => { //touch variation
+		const newText = container.getAttribute('data-text');
+		typeText(newText);
 	});
 
-	container.addEventListener('mouseleave', () => {
-		hexText.style.visibility = 'hidden'; // Hide the text when mouse leaves
+	container.addEventListener('mouseleave', () => {// Hide text when mouse leaves
+		hexText.style.visibility = 'hidden'; 
 		clearInterval(hexTypeInterval); // Stop any ongoing typing
 	});
 	
-	container.addEventListener('touchend', () => {
-		hexText.style.visibility = 'hidden'; // Hide the text when mouse leaves
-		clearInterval(hexTypeInterval); // Stop any ongoing typing
+	container.addEventListener('touchend', () => { //touch variation
+		hexText.style.visibility = 'hidden';
+		clearInterval(hexTypeInterval);
 	});
 });
 hexLink.forEach(link => { // Attach event listeners to animations
@@ -116,4 +117,25 @@ window.onload = function() {
 };
 
 
+// make it so contact buttons add text to clipboard
+document.addEventListener("DOMContentLoaded", () => {
+  const contactheader = document.getElementById('contactheader');
 
+  // Add click event to all non-link contact images (scuffed, I know)
+  document.querySelectorAll('.contact-image').forEach(image => {
+    image.addEventListener('click', () => {
+      const copyText = image.getAttribute('copy');
+			const resultText = image.getAttribute('result');
+      navigator.clipboard.writeText(copyText)
+        .then(() => {
+          contactheader.textContent = resultText;
+          setTimeout(() => {
+            contactheader.textContent = 'Contact Me!';
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+    });
+  });
+});

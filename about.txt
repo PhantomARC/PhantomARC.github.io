@@ -1,0 +1,14 @@
+Hi there, I'm _ARX!<br>
+<br>
+I'm a music producer and an independent game developer, and I'm super excited to finally be able to share with all of you the products of my efforts and the highlights of the journey along the way!<br>
+<br>
+As a recent computer-music major graduate from the University of California, San Diego, I’ve learned the ins and outs of studio recording and general music production techniques, which has greatly elevated my musical capablities. My capstone project, [Artifacts & Interfaces], touches on this by implementing a variety of trackers and DAWs (e.g. Ableton, Pro Tools, LMMS, Reaper, SunVox, OpenUTAU, and more!) along with traditional scoring and live performance to understand the creative restrictions software and mehcanical prowess places on the quality and contents of music. As a cellist of over 7 years, I’ve learned the discipline, mechanics, leadership and etiquette behind practice and performances; my high school orchestra’s victory at the National Orchestra Cup was proof enough of the progress I’d made with my fellow musicians. And as an avid enjoyer of rock, J-pop and electronic music, I’ve explored a multitude of genres and styles and spent the last 8 years crafting my very own style of music, most of which will be released soon!<br>
+<br>
+In addition, I am, have been, and always will be fascinated by computers and tech. In high school, I’d learned to construct digital circuitry and primary logic gates — Multiplexers, H-Bridges, Flip-Flops and the like — and continued my pursuit of hardware applications during my years in university. I learned about hobbyist grade hardware and combined them with wireless technologies to build remote controlled vehicles, card-scanning music boxes and even devices which played tones based on Discord commands that any user could contribute to.<br>
+<br>
+On the software side, I’d learned and grown from my peers for a decade on MIT’s introductory programming language, Scratch. I’ve contributed to a swath of projects in the form of code optimizations, UXUI designs, and even basic peer-to-peer connectivity for multiplayer games. From there, I’d moved on to other languages and built various programs, ranging from Discord bots in Javascript to numerical image recognition in Matlab to reverb and EQ music plugins in C++. And just recently, I’ve built this website from the ground up!<br>
+<br>
+I am always excited to share my story with others, and I hope the results of my journey will excite you too.<br>
+<br>
+<br>
+_ARX

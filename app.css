@@ -41,6 +41,19 @@
 }
 
 
+@keyframes glow {
+  0%, 90% {filter: invert(14%) sepia(78%) saturate(4732%) hue-rotate(330deg) brightness(102%) contrast(121%);}
+  95%,100% {filter: invert(14%) sepia(78%) saturate(4732%) hue-rotate(300deg) brightness(1202%) contrast(121%);}
+}
+@keyframes float {
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(30px);}
+}
+@keyframes blur {
+  0% {backdrop-filter: blur(3px) saturate(1);}
+  100% {backdrop-filter: blur(10px) saturate(1.1);}
+}
+
 
 
 /* Set Default Fonts */
@@ -93,7 +106,7 @@ footer { /* Footer */
 
 
 .spacer {
-  height: 200px; /* Adjust height as needed for the gap */
+  height: var(--dist,200px); /* Adjust height as needed for the gap */
 }
 
 .projspacer {
@@ -121,7 +134,7 @@ footer { /* Footer */
 .grid-right { /* Small Grid */
 	margin:  40px 12px; /* center main */
   display: grid;
-  grid-template-rows: auto auto; /* Two equal-height rows */
+  grid-template-rows: var(--grid-rows, auto);
   gap: 16px; /* Space between top and bottom blocks */
   height: 90%; /* Ensures it fills the grid row */
 }
@@ -166,12 +179,66 @@ footer { /* Footer */
 	padding: 12px 12px;
 }
 
+.contact-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 32px;
+	padding: 8px;
+}
+
+.contact-image {
+	height: 24%;
+	width: 24%;
+	transition: filter 0.2s linear;
+}
+
+.contact-link {
+	height: 24%;
+	width: 24%;
+}
+
+.contact-link img {
+	height: 100%;
+	width: 100%;
+	transition: filter 0.2s linear;
+}
+
+.contact-image:hover {
+	filter: invert(0.4);
+}
+
+.contact-link:hover img{
+	filter: invert(0.4);
+}
+
 .embed-block {
 	background: var(--dkgrey);
 	border-radius: 6px;
 	padding: 12px 12px;
 	height: 100%;
 	width: 100%;
+}
+
+.masker {
+	background-repeat: no-repeat;
+  background-image: url("res/images/UARX.png");
+	animation-play-state: playing;
+	animation-iteration-count: infinite;
+	animation-name: glow, float;
+  animation-duration: 6s, 3s;
+	transition: filter 6s ease-in-out, transform 3s ease-in-out; 
+	animation-direction: alternate;
+	width: 90%;
+}
+
+.pfpimg {
+	transition: backdrop-filter 4s linear; 
+  animation-play-sate: playing;
+	animation-iteration-count: infinite;
+	animation-name: blur;
+	animation-duration: 4s;
+	animation-direction: alternate;
 }
 
 .text-block {
@@ -311,7 +378,7 @@ footer { /* Footer */
 }
 
 .proj-panel a img {
-    transition: filter 0.15s ease, transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
 }
 
 .proj-panel {

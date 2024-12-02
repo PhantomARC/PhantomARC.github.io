@@ -1,0 +1,111 @@
+Welcome to Goomble Gurt 2!
+
+Go on a brand new Goomble filled adventure and maybe make a few friends along the way!
+
+Controls: 
+Everything can be done with mouse/touch input. 
+Optional Features for Desktop:
+- Using keyboard to nickname Goombles
+- Arrow keys to navigate comics
+
+P.S. Easy Mode can be toggled in the settings menu.
+
+
+About Saves:
+Saving on mobile is a bit tricky since it isn't easy to copy text from a list. Try using "select all" and then editing the paste to remove all the extra words you copy, or if your phone allows for raindrop selection to make sure the right raindrop is past the "..." before you copy. On desktop, simply triple click the text in the save code to select it all. Try to store your save somewhere like a .txt or .csv, as certain software can add markers to the text that corrupt the data.
+
+
+Credits:
+Rights for writing and art assets  are owned and reserved by klabss.
+Programming:
+Savecodes - _ARX, klabss
+Storage - _ARX, klabss
+Box UI - _ARX
+Keyboard UI - _ARX
+Combat UI - _ARX, klabss
+Combat Engine - klabss
+Sprite Data Allocation - klabss
+CPU and AI training - klabss
+Map UI - _ARX, klabss
+Miniature Sprites - _ARX
+Sprite Animations - _ARX
+Multiplayer - (formerly) _ARX, klabss
+Fishing Minigame - _ARX
+Index UI - _ARX
+Database Compiling - _ARX
+Bag UI - Mazmythic 
+Boolean Parser - Shale
+Balance/Cloud testing - _ARX, The_mad_lad, dn
+
+
+Designs based on user's original characters: 
+Narnar - Astro
+Wallfish - Apfellord
+Lettoise - RendHeaven
+Goombse - Hmyesquite
+Mirimet - Hmyesquite
+Workle - Hmyesquite
+Animo - Hoodedfigure
+Subscrish - Keiron
+Thunderfox - Thunderfox
+Krinse - CrystalMage
+
+All other Goomble and character designs are created and reserved by klabss
+Some UI Designs and miniature sprites drawn and developed by _ARX
+
+Original Music:
+Bobbleheads - _ARX
+A Step Forward - _ARX
+Surreal Showdown - _ARX
+Rivalation - _ARX
+Meditation - _ARX
+Sunken Thoughts - _ARX
+Wonky - _ARX
+Trade Theme - klabss
+
+Other Music:
+Tempo Velho - Douglas Germano
+Déshominisation - Goraguer
+Plantasia - Mort Garson
+The Roost - Animal Crossing
+Guile Theme - StreetFighter
+Chega de Saudade - João Gilberto
+All hail the Fishmen - Widdly 2, Marina Hova
+Falling for 19 TET - Seasons of Microtonal Music
+41A, Ernie - Zackery Wilson
+Floaroma Town - Pokemon
+Timegear - Pokemon
+Oreburgh Mine - Pokemon
+Colorvision - Com Truise
+Route 32 - Pokemon
+Saladik Ătjum - Polytopia
+Greetings - Pilotredsun
+Mt. Coronet - Pokemon
+
+SFX:
+surface of the sun - squidge316
+Walking In Mud - lukiacostello
+Diversion Squelch - kapnos_mantis
+Tires Squeaking - RutgerMuller
+Sword Clash and Slide - FunWithSound
+PouringTea - shelbyshark
+Success Jingle - JustInvoke
+Appliance-Microwave-Door-Close - DWOBoyle
+Alien Computer sound effect - Mastersoundboy2005
+ightsaber - skytheguy
+Crack and Stress - JustinBW
+Sizzle Zaps - Canakinsound
+ss-dualtone - sstokes
+water_splash_10shots - vibe_crc
+Chime 0009 - radian
+You miss your attack (sfx) - xkeril
+Success - Kagateni
+Yippee - Apfellord
+Shield - Fire Emblem
+Anvil - Minecraft
+Windows xp power on - Windows
+Weezer - Weezer
+Summer Goddess - SOIL and PMP Sessions
+Rush - Seatbelts (Cowboy Bebop)
+
+This project is distributed under the Creative Commons Attribution-Share Alike license.

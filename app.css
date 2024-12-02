@@ -64,6 +64,9 @@ h6 {
 	font-family: 'SUSE';
 	font-size: 32px;
 }
+p {
+	white-space: pre-line;
+}
 
 /* Styles */
 * { /* Browser Defaults */

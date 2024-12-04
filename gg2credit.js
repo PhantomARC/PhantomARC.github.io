@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
       // Insert the content into the .textbox element
-      document.querySelector('.text-block').textContent = data;
+			let paragraph = document.createElement("p");
+			paragraph.textContent = data;
+      document.querySelector('.text-block').appendchild(paragraph);
     })
     .catch(error => {
       console.error('There was a problem loading the file:', error);

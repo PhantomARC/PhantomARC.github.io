@@ -108,6 +108,17 @@ footer { /* Footer */
 }
 
 
+.project-grid {
+	margin: 36px 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	width: 100%;
+	height: 95%;
+	gap: 20px 20px;
+	padding: 20px 20px;
+}
+
 .spacer {
   height: var(--dist,200px); /* Adjust height as needed for the gap */
 }
@@ -142,8 +153,21 @@ footer { /* Footer */
   height: 90%; /* Ensures it fills the grid row */
 }
 
-.minicontainer {
+.minicontainer, .box {
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* outline shadow */
+	color: var(--white);
+}
+
+.box {
+	height: 400px;
+}
+
+.block-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .top-block { /*  */
@@ -180,6 +204,14 @@ footer { /* Footer */
 	border-bottom-left-radius: 6px;  /* botleft corner */
 	border-bottom-right-radius: 6px;  /* botright corner */
 	padding: 12px 12px;
+}
+
+.fill-block { /* section for content */
+	background: var(--dkgrey);
+	border-bottom-left-radius: 6px;  /* botleft corner */
+	border-bottom-right-radius: 6px;  /* botright corner */
+	padding: 12px 12px;
+	height: 88%;
 }
 
 .contact-block {

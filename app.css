@@ -156,6 +156,7 @@ footer { /* Footer */
 .minicontainer, .box {
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* outline shadow */
 	color: var(--white);
+	
 }
 
 .box {
@@ -204,6 +205,8 @@ footer { /* Footer */
 	border-bottom-left-radius: 6px;  /* botleft corner */
 	border-bottom-right-radius: 6px;  /* botright corner */
 	padding: 12px 12px;
+	display: flex;
+	
 }
 
 .fill-block { /* section for content */
@@ -264,7 +267,7 @@ footer { /* Footer */
   animation-duration: 6s, 3s;
 	transition: filter 6s ease-in-out, transform 3s ease-in-out; 
 	animation-direction: alternate;
-	width: 90%;
+	width:90%;
 }
 
 .pfpimg {
@@ -289,7 +292,7 @@ footer { /* Footer */
 
 .relgrid { /* Body Blocks */
   display: grid;
-	grid-template-columns: 1fr 1fr 1fr; /* Default fallback if not set */
+	grid-template-columns: 1fr 1fr 2fr; /* Default fallback if not set */
   grid-template-rows: auto;
   gap: 16px; /* Space between blocks */
 }
